@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import './List.css'
-import { url, currency } from '../../assets/assets'
+import './ListProduct.css'
+import { url, currency } from '../../../assets/assets'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const List = () => {
+const ListProduct = () => {
 
   const [list, setList] = useState([]);
 
@@ -62,4 +62,4 @@ const List = () => {
   )
 }
 
-export default List
+export default ListProduct
