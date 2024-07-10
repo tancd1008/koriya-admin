@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AddProduct from './pages/Product/Add/AddProduct'
 import AddCategory from './pages/Category/Add/AddCategory'
 import ListProduct from './pages/Product/ListProduct/ListProduct'
+import AddOption from './pages/OptionProduct/Add/AddOption'
 
 const App = () => {
   return (
@@ -18,10 +19,11 @@ const App = () => {
       <div className="app-content">
         <Sidebar />
         <Routes>
-          <Route path="/add" element={<AddProduct />} />
+          <Route path="/add-product" element={<AddProduct />} />
           <Route path="/category" element={<AddCategory />} />
           <Route path="/list" element={<ListProduct />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/add-options" element={<AddOption />} />
         </Routes>
       </div>
     </div>

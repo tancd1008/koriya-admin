@@ -3,13 +3,15 @@ import './ListProduct.css'
 import { url, currency } from '../../../assets/assets'
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { NavLink } from 'react-router-dom'
 
 const ListProduct = () => {
 
   const [list, setList] = useState([]);
 
   const fetchList = async () => {
-    const response = await axios.get(`${url}/api/food/list`)
+    const response = await axios.post(`${url}/api/admin/food/get-all-foods`)
+    console.log(response)
     if (response.data.success) {
       setList(response.data.data);
     }
@@ -37,6 +39,13 @@ const ListProduct = () => {
 
   return (
     <div className='list add flex-col'>
+      <div>
+      
+      
+        <NavLink to='/add-product' type='submit' className="add-btn" >
+          Add Product
+        </NavLink>
+      </div>
       <p>All Foods List</p>
       <div className='list-table'>
         <div className="list-table-format title">
